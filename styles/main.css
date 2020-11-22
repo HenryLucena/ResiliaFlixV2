@@ -1,0 +1,67 @@
+:root {
+    --background-color: #252525;
+    --links-color: #CCCCCC;
+}
+
+
+@font-face {
+    font-family: 'Qualy';
+    src: url(../resources/fonts/Qualy\ Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url(../resources/fonts/Gotham-Font/GothamBook.ttf),
+    url(../resources/fonts/Gotham-Font/GothamLight.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Gotham', sans-serif;
+}
+
+body {
+    background-color: var(--background-color); /* #252525*/
+}
+
+.header {
+    padding: 0 10px;
+}
+
+.header h1 {
+    font-family: 'Qualy', sans-serif;
+    color: #E02844;
+    text-shadow: 3px 0px 3px rgba(97, 97, 97, 0.2);
+}
+
+.header a {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--links-color);
+}
+
+.input-pesquisa {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    outline: none;
+    height: 35px;
+    color: white;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.button {
+    border: none;
+    background-color: transparent;
+    margin: 0 10px;
+    color: #FFFFFF;
+}
+
+.button:hover {
+    transition: .3s;
+    color: #CCC;
+}
