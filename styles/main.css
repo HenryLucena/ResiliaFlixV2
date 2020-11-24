@@ -65,3 +65,80 @@ body {
     transition: .3s;
     color: #CCC;
 }
+
+.menu-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: flex;
+    }
+
+    .logo {
+        font-family: 'Qualy', sans-serif;
+        font-size: 36px;
+        color: #E02844;
+        text-shadow: 3px 0px 3px rgba(97, 97, 97, 0.2);
+    }
+
+    .search {
+        color: #E02844;
+        border: none;
+        background-color: transparent;
+    }
+
+    .navbar {
+        height: 60px;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        color: var(--links-color);
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+        transition: .3s;
+        color: #e7e7e7;
+    }
+
+    .navbar-collapse {
+        grid-area: "hamburguer";
+
+    }
+    
+    button:focus {
+        outline: none;
+    }
+
+    .fa-1x {
+        font-size: 1.5rem;
+    }
+
+    .navbar-toggler.toggler-example {
+        cursor: pointer;
+    }
+
+    .menu-color {
+        color: #E02844;
+    }
+
+    .dark-pink-text {
+        color: #AC003A;
+    }
+
+    .dark-amber-text {
+        color: #ff6f00;
+    }
+
+    .dark-teal-text {
+        color: #004d40;
+    }
+}
