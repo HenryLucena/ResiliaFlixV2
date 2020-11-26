@@ -66,6 +66,29 @@ body {
     color: #CCC;
 }
 
+/* <<<<<<< Amanda */
+.email {
+    margin: 0 5% 0 3%;
+    outline: none;
+    border: none;
+    border-bottom: black 1px solid;
+}
+
+.senha {
+    margin: 0 5% 0 3%;
+    outline: none;
+    border: none;
+    border-bottom: black 1px solid;
+}
+
+.btn-color {
+    background-color: #E02844;
+    border: #E02844;
+}
+
+.btn-color:hover {
+    background-color: black;
+/* ======= */
 h3{
     font-size: 18px;
     font-weight: bold;
@@ -90,4 +113,5 @@ div .card{
 img .card-img-top{
 
     width: 300px;
+/* >>>>>>> main */
 }
