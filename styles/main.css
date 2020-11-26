@@ -66,6 +66,7 @@ body {
     color: #CCC;
 }
 
+/* <<<<<<< Amanda */
 .email {
     margin: 0 5% 0 3%;
     outline: none;
@@ -87,4 +88,30 @@ body {
 
 .btn-color:hover {
     background-color: black;
+/* ======= */
+h3{
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--links-color);
+}
+p{
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--links-color);
+}
+
+
+
+/* Página contato */
+
+div .card{
+
+    width: 320px;
+    background-color: rgba(100, 100, 100, 0.3);
+
+}
+img .card-img-top{
+
+    width: 300px;
+/* >>>>>>> main */
 }
