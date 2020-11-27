@@ -1,14 +1,11 @@
 class OMDbController {
 
-    constructor(pesquisa) {
-        this._filmePesquisado = pesquisa
-    }
-
-   buscaFilme() {
+    static buscaFilme(filmePesquisado) {
         var filme = new OMDbModel()
-        filme.buscaDados(this._filmePesquisado)
-        
+        filme.buscaDados(filmePesquisado)
+
         var mostraFilme = new OMDbView()
-        mostraFilme.render(filme)
+        mostraFilme.render(filme.infos)
+
     }
 }
