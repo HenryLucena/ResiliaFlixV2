@@ -1,28 +1,29 @@
 class OMDbModel {
 
     constructor() {
-        this._titulo = ''
-        this._dataLancamento = ''
-        this._duracao = ''
-        this._genero = ''
-        this._diretor = ''
-        this._atores = ''
-        this._plot = ''
-        this._img = ''
+        this._titulo = '';
+        this._dataLancamento = '';
+        this._duracao = '';
+        this._genero = '';
+        this._diretor = '';
+        this._atores = '';
+        this._enredo = '';
+        this._img = '';
     }
 
     buscaDados(pesquisa) {
         let request = new XMLHttpRequest
 
-        request.open('GET', `http://www.omdbapi.com/?t=${pesquisa}&plot=full&apikey=a0581d9a`)
- 
-            request.addEventListener('load', () => {
-                let dados = JSON.parse(request.responseText)
+        request.addEventListener('load', () => {
+            let dados = JSON.parse(request.responseText)
 
+            this._atualiza(dados)
                 this._atualiza(dados)            
+            this._atualiza(dados)
 
-            })
-        
+        })
+
+        request.open('GET', `http://www.omdbapi.com/?t=${pesquisa}&plot=full&apikey=a0581d9a`, false)
 
         request.send()
     }
@@ -34,7 +35,7 @@ class OMDbModel {
         this._genero = teste.Genre
         this._diretor = teste.Director
         this._atores = teste.Actors
-        this._plot = teste.Plot
+        this._enredo = teste.Plot
         this._img = teste.Poster
     }
 
@@ -46,42 +47,10 @@ class OMDbModel {
             genero: this._genero,
             diretor: this._diretor,
             atores: this._atores,
-            plot: this._plot,
+            enredo: this._enredo,
             img: this._img, 
         }
     } 
 
 
-    get titulo() {
-        return {titulo: this._titulo}
-    }
-
-    get data() {
-        console.log(this._dataLancamento)
-        return this._dataLancamento
-    }
-
-    get duracao() {
-        return this._duracao
-    }
-    
-    get genero(){
-        return this._genero
-    }
-
-    get diretor(){
-        return this._diretor
-    }
-
-    get atores(){
-        return this._atores
-    }
-
-    get plot() {
-        return this._plot
-    }
-    
-    get img() {
-        return this._img
-    }
 }
