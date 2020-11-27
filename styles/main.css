@@ -70,6 +70,10 @@ body {
     display: none;
 }
 
+.fa-search  {
+    color: white;
+}
+
 @media (max-width: 768px) {
     .header {
         display: none;
