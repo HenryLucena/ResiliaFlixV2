@@ -67,6 +67,10 @@ body {
 }
 
 /* <<<<<<< Amanda */
+.email-login {
+    margin-left: 3%;
+}
+
 .email {
     margin: 0 5% 0 3%;
     outline: none;
@@ -81,6 +85,10 @@ body {
     border-bottom: black 1px solid;
 }
 
+.recuperacao {
+    margin-left: 3%;
+}
+
 .btn-color {
     background-color: #E02844;
     border: #E02844;
@@ -88,8 +96,6 @@ body {
 
 .btn-color:hover {
     background-color: black;
-/* ======= */
-h3{
     font-size: 18px;
     font-weight: bold;
     color: var(--links-color);
@@ -114,4 +120,61 @@ img .card-img-top{
 
     width: 300px;
 /* >>>>>>> main */
+}
+
+.imagem-carrossel-um {
+    object-fit: cover;
+    object-position: 0 35%;
+    height: 500px;
+}
+
+.imagem-carrossel-dois {
+    object-fit: cover;
+    object-position: 0 25%;
+    height: 500px;
+}
+
+.imagem-carrossel-tres {
+    object-fit: cover;
+    object-position: 0 25%;
+    height: 500px;
+}
+
+.container-pagina-rec {
+    display: flex;
+    justify-content: center;
+}
+
+.pagina-rec {
+    background-color: #f1f1f1;
+    width: 400px;
+    padding: 3% 3%;
+    margin-top: 7%;
+}
+
+.pagina-rec p {
+    color: black;
+    margin: 20px 0;
+}
+
+.email-rec {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 11px;
+    margin: 0 0 25px;
+}
+
+.botao-rec {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 11px;
+    background-color: #E02844;
+    color: white;
+}
+
+.botao-rec:hover {
+    background-color: black;
+    transition: 0.4s;
 }
