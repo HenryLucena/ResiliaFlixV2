@@ -1,13 +1,21 @@
 let botao = document.getElementById('buscar')
 botao.addEventListener('click', filmes)
 
+let input = document.getElementById('tituloFilme')
+input.addEventListener('keypress', function(e) {
+    if(e.key == 'Enter' || e.keyCode == 13 || e.which == 13){
+      filmes();
+    }
+  }, false);
+
 async function filmes () {
-    // limpando div
-    // limpa div container caso haja uma anterior (busca anterior)
+    /* LIMPANDO DIV
+    limpa div container caso haja uma anterior (busca anterior) */
     let el = document.getElementById( 'container' );
     if (el != null) {
         el.parentNode.removeChild( el );
     }
+
     // cria novamente a div container
     let body = document.body
     let div = document.createElement('div')
@@ -15,12 +23,12 @@ async function filmes () {
     div.className = 'filmes'
     div.style = "color:white;"
     body.appendChild(div)
-
+    
     // requisicao
     let pesquisa = document.getElementById('tituloFilme').value
-    
     let key = 'df65174b'
     let url = `http://www.omdbapi.com/?s=${pesquisa}&apikey=${key}`
+    
     
     let resposta = await fetch(url)
         .then(res => {
@@ -29,20 +37,44 @@ async function filmes () {
         })
         
         if (resposta.Response === 'False') {
-            let container = document.getElementById('container')
-            container.textContent = 'filme nao encontrado'
+            
+            let results = document.getElementById('results')
+            let resultados = `<p class="erro-busca">Nenhum título com "${pesquisa}" foi encontrado.
+                        <br>Por favor, tente novamente.
+                        <br><small><em>Dica:</em> Pesquise o título em inglês</small></p>`
+            results.innerHTML = resultados
         }
-        else if (resposta.Response === 'True') {
-            let movies = resposta.Search // array retornado pela requisicao
 
+        else if (resposta.Response === 'True') {
+            let container = document.getElementById('container')
+            
+            
+            let movies = resposta.Search // array retornado pela requisicao
             for (movie of movies) {
-                let container = document.getElementById('container')
+
+                let results = document.getElementById('results')
+                let resultados = `<p class="resultados">Foram encontrados ${resposta.totalResults} resultados para esta pesquisa.<br>Estes são os principais...</p>`
+                results.innerHTML = resultados
+                
+                // cria div especifica para cada filme
+                let movieContainer = document.createElement('div')
+                movieContainer.className = 'filme-container'
+                container.appendChild(movieContainer)
+                
+                let img = `<div class="capa">
+                <img src="${movie.Poster}" alt="Capa do filme ${movie.Poster}" title="${movie.Poster}">
+                </div>`
+                movieContainer.innerHTML += img
+
+                // div para infos
+                let infoDiv = document.createElement('div')
+                infoDiv.className = 'info-filme'
+                movieContainer.appendChild(infoDiv)
+
+
                 
                 let titulo = `<h1 class="titulo-filme">${movie.Title}</h1>`
-                container.innerHTML += titulo
-
-                let img = `<img src="${movie.Poster}" class="capa-filme">`
-                container.innerHTML += img
+                infoDiv.innerHTML += titulo
 
                 let tipoFilme = movie.Type
                 if (tipoFilme == "game") {
@@ -56,12 +88,14 @@ async function filmes () {
                 }
 
                 let tipo = `<h2 class="tipo-filme">${tipoFilme}</h2>`
-                container.innerHTML += tipo 
+                infoDiv.innerHTML += tipo 
 
                 let ano = `<span class="ano-filme">${movie.Year}</span>`
-                container.innerHTML += ano
+                infoDiv.innerHTML += ano
 
+                
             }
         }
-        console.log(resposta.Search)
+
+        console.log(resposta)
 }
