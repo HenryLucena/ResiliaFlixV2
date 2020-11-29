@@ -43,6 +43,10 @@ body {
     color: var(--links-color);
 }
 
+.collapse {
+    justify-content: flex-end;
+}
+
 .input-pesquisa {
     background-color: transparent;
     border: 1px solid white;
@@ -140,20 +144,65 @@ img .card-img-top{
     height: 500px;
 }
 
+/* footer */
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+
+}
+
+.img-redes {
+    width: 30px;
+    margin: 0 5px;
+}
+
+.mapa-site {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15% 10px;
+}
+
+.mapa-link {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.mapa-link:hover {
+    color: #f1f1f1;
+}
+
+.copyright {
+    color: #f1f1f1;
+    margin: 0 15%;
+}
+
+/* Pagina de recuperação */
+
+.bg-img-rec {
+    background-image: url(https://streamingsbrasil.com/wp-content/uploads/2019/12/Netflix-est%C3%A1-removendo-filmes-mais-r%C3%A1pido.jpg);
+}
+
 .container-pagina-rec {
     display: flex;
     justify-content: center;
+    
 }
 
 .pagina-rec {
-    background-color: #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.6);
     width: 400px;
-    padding: 3% 3%;
+    padding: 5% 3%;
     margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+.pagina-rec h3 {
+    color: #f1f1f1;
 }
 
 .pagina-rec p {
-    color: black;
     margin: 20px 0;
 }
 
@@ -162,19 +211,25 @@ img .card-img-top{
     outline: none;
     width: 100%;
     padding: 10px 11px;
-    margin: 0 0 25px;
+    margin: 10px 0 30px;
 }
 
 .botao-rec {
-    border: none;
+    border: 1px solid #E02844;
     outline: none;
     width: 100%;
     padding: 10px 11px;
     background-color: #E02844;
     color: white;
+    margin-top: 10px;
 }
 
 .botao-rec:hover {
     background-color: black;
     transition: 0.4s;
+    border: 1px solid #E02844;
+}
+
+.email-enviado {
+    color: red;
 }
