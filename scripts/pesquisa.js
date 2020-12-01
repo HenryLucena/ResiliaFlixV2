@@ -11,9 +11,9 @@ input.addEventListener('keypress', function(e) {
 async function filmes () {
     /* LIMPANDO DIV
     limpa div container caso haja uma anterior (busca anterior) */
-    let el = document.getElementById( 'container' );
+    let el = document.getElementById('container')
     if (el != null) {
-        el.parentNode.removeChild( el );
+        el.parentNode.removeChild( el )
     }
 
     // cria novamente a div container
@@ -50,8 +50,9 @@ async function filmes () {
             
             
             let movies = resposta.Search // array retornado pela requisicao
+            
             for (movie of movies) {
-
+                
                 let results = document.getElementById('results')
                 let resultados = `<p class="resultados">Foram encontrados ${resposta.totalResults} resultados para esta pesquisa.<br>Estes são os principais...</p>`
                 results.innerHTML = resultados
@@ -71,8 +72,6 @@ async function filmes () {
                 infoDiv.className = 'info-filme'
                 movieContainer.appendChild(infoDiv)
 
-
-                
                 let titulo = `<h1 class="titulo-filme">${movie.Title}</h1>`
                 infoDiv.innerHTML += titulo
 
@@ -92,7 +91,6 @@ async function filmes () {
 
                 let ano = `<span class="ano-filme">${movie.Year}</span>`
                 infoDiv.innerHTML += ano
-
                 
             }
         }

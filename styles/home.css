@@ -1,0 +1,14 @@
+.home-movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie img {
+    width: 200px;
+    border-radius: 10px;
+    margin: 5px 10px 5px 0;
+}
+
+.movie img:nth-child()
