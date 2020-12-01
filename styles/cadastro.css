@@ -1,0 +1,98 @@
+:root {
+    --background-color: #252525;
+    --links-color: #CCCCCC;
+}
+
+
+@font-face {
+    font-family: 'Qualy';
+    src: url(../resources/fonts/Qualy\ Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url(../resources/fonts/Gotham-Font/GothamBook.ttf),
+    url(../resources/fonts/Gotham-Font/GothamLight.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gotham', sans-serif;
+    color: var(--font-cadastro);
+}
+
+:root {
+    --font-cadastro: #F2F2F2;
+    --corCadastrar: #E02844;
+    --cor-termo: #E02844;
+}
+
+#botao-cadastro {
+    background: var(--corCadastrar);
+    border: none;
+}
+
+#customSwitch1 {
+    background: var(--cor-termo);
+
+}
+
+.header {
+    padding: 0 10px;
+}
+
+.header h1 {
+    font-family: 'Qualy', sans-serif;
+    color: #E02844;
+    text-shadow: 3px 0px 3px rgba(97, 97, 97, 0.2);
+}
+
+
+.header a {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--links-color);
+}
+
+body {
+    background-color: var(--background-color); /* #252525*/
+}
+
+.formm  {
+    background-color: #3f3f3f;
+     margin: 13px;
+     padding: 40px;
+     border-radius: 30px;
+ 
+}
+
+.input-pesquisa {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    outline: none;
+    height: 35px;
+    color: white;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.button {
+    border: none;
+    background-color: transparent;
+    margin: 0 10px;
+    color: #FFFFFF;
+}
+
+.button:hover {
+    transition: .3s;
+    color: #CCC;
+}
+
+
+
+
+
+
