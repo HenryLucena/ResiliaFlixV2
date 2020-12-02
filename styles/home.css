@@ -11,4 +11,7 @@
     margin: 5px 10px 5px 0;
 }
 
-.movie img:nth-child()
+.modal .modal-content {
+    color: black;
+}
+
