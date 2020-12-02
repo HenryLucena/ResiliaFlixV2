@@ -357,7 +357,6 @@ footer .copyright {
         color: var(--links-color);
     }
     
-    
     /* main */
     .imagem-carrossel-um {
         object-fit: cover;
@@ -430,9 +429,9 @@ footer .copyright {
     
     /* footer */
     footer {
-        /* position: absolute;
+        position: absolute;
         bottom: 0;
-        width: 100%; */
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
