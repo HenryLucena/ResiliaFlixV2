@@ -61,79 +61,14 @@ body {
     display: none;
 }
 
-
-@media (max-width: 768px) {
-    .header {
-        display: none;
-    }
-
-    .menu-mobile {
-        display: flex;
-    }
-
-    .logo {
-        font-family: 'Qualy', sans-serif;
-        font-size: 36px;
-        color: var(--red-items);
-        text-shadow: 3px 0px 3px rgba(97, 97, 97, 0.2);
-    }
-
-    .navbar {
-        height: 60px;
-    }
-
-    .navbar-toggler {
-        border: none;
-    }
-
-    .navbar-nav .nav-item .nav-link {
-        color: var(--links-color);
-    }
-
-    .navbar-nav .nav-item .nav-link:hover {
-        transition: .3s;
-        color: #e7e7e7;
-    }
-
-    .menu-color i {
-        color: var(--red-items);
-    }
-    
-    button:focus {
-        outline: none;
-    }
-
-    .fa-1x {
-        font-size: 1.5rem;
-    }
-
-    .navbar-toggler.toggler-example {
-        cursor: pointer;
-    }
-
-    .menu-color {
-        color: #E02844;
-    }
-
-    .dark-pink-text {
-        color: #AC003A;
-    }
-
-    .dark-amber-text {
-        color: #ff6f00;
-    }
-
-    .dark-teal-text {
-        color: #004d40;
-    }
-}
-
-
-
 p, span {
     font-size: 16px;
     font-weight: 600;
-    color: black;
+    color: var(--text-color);
+}
+
+.black-text {
+    color: #0f0f0f;
 }
 
 .close-icon {
@@ -142,7 +77,6 @@ p, span {
 }
 
 /* Página contato */
-
 div .card{
     width: 320px;
     background-color: rgba(100, 100, 100, 0.3);
@@ -167,11 +101,17 @@ img .card-img-top{
     display: none;
 }
 
+/* footer */
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
+    background-color: #050505;
+}
+
+footer .copyright {
+    margin: 0;
 }
 
 .img-redes {
@@ -180,7 +120,6 @@ footer {
 }   
 
 /* página de contato */
-
 #aFale{
     text-decoration: none!important;
 }
@@ -195,12 +134,13 @@ footer {
 }
 
 .Devs{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
 .desenvolvedor{
     width: 200px;
     height: 420px;
@@ -250,10 +190,6 @@ footer {
     color: #f1f1f1; 
 }
 
-/* #inputForm{
-    font-size: 14px;
-    color: #f1f1f1;
-} */
 .btn{
     background-color: #E02844;
     border: #E02844;
@@ -285,7 +221,6 @@ footer {
         text-shadow: 3px 0px 3px rgba(97, 97, 97, 0.2);
     }
 
-
     .navbar {
         height: 60px;
     }
@@ -306,7 +241,6 @@ footer {
     .menu-color i {
         color: var(--red-items);
     }
-    
     
     button:focus {
         outline: none;
@@ -335,261 +269,255 @@ footer {
     .dark-teal-text {
         color: #004d40;
     }
-
-.email-login {
-    margin-left: 3%;
-}
-
-.email {
-    margin: 0 5% 0 3%;
-    outline: none;
-    border: none;
-    border-bottom: black 1px solid;
-}
-
-.senha {
-    margin: 0 5% 0 3%;
-    outline: none;
-    border: none;
-    border-bottom: black 1px solid;
-}
-
-.recuperacao {
-    margin-left: 3%;
-}
-
-.btn-color {
-    background-color: #E02844;
-    border: #E02844;
-}
-
-.btn-color:hover {
-    background-color: black;
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--links-color);
-}
-
-
-/* main */
-.imagem-carrossel-um {
-    object-fit: cover;
-    object-position: 0 35%;
-    height: 500px;
-}
-
-.imagem-carrossel-dois {
-    object-fit: cover;
-    object-position: 0 25%;
-    height: 500px;
-}
-
-.imagem-carrossel-tres {
-    object-fit: cover;
-    object-position: 0 25%;
-    height: 500px;
-}
-
-/* footer */
-
-.redes-sociais {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-
-}
-
-.img-redes {
-    width: 30px;
-    margin: 0 5px;
-}
-
-.mapa-site {
-    display: flex;
-    flex-direction: column;
-    margin: 0 15% 10px;
-}
-
-.mapa-link {
-    color: #f1f1f1;
-    text-decoration: none;
-}
-
-.mapa-link:hover {
-    color: #f1f1f1;
-}
-
-.copyright {
-    color: #f1f1f1;
-    margin: 0 15%;
-}
-
-/* Pagina de recuperação */
-
-.bg-img-rec {
-    background-image: url(https://streamingsbrasil.com/wp-content/uploads/2019/12/Netflix-est%C3%A1-removendo-filmes-mais-r%C3%A1pido.jpg);
-}
-
-.container-pagina-rec {
-    display: flex;
-    justify-content: center;
+    .email-login {
+        margin-left: 3%;
+    }
     
-}
-
-.pagina-rec {
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 400px;
-    padding: 5% 3%;
-    margin-top: 7%;
-    margin-bottom: 7%;
-}
-
-.pagina-rec h3 {
-    color: #f1f1f1;
-}
-
-.pagina-rec p {
-    margin: 20px 0;
-}
-
-.email-rec {
-    border: none;
-    outline: none;
-    width: 100%;
-    padding: 10px 11px;
-    margin: 10px 0 30px;
-}
-
-.botao-rec {
-    border: 1px solid #E02844;
-    outline: none;
-    width: 100%;
-    padding: 10px 11px;
-    background-color: #E02844;
-    color: white;
-    margin-top: 10px;
-}
-
-.botao-rec:hover {
-    background-color: black;
-    transition: 0.4s;
-    border: 1px solid #E02844;
-}
-
-.email-enviado {
-    color: red;
-}
-
-
-/* >>>>>>> main */
-
-.imagem-carrossel-um {
-    object-fit: cover;
-    object-position: 0 35%;
-    height: 500px;
-}
-
-.imagem-carrossel-dois {
-    object-fit: cover;
-    object-position: 0 25%;
-    height: 500px;
-}
-
-.imagem-carrossel-tres {
-    object-fit: cover;
-    object-position: 0 25%;
-    height: 500px;
-}
-
-/* footer */
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #050505;
-}
-
-.redes-sociais {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-}
-
-.img-redes {
-    width: 30px;
-    margin: 0 5px;
-}
-
-.mapa-site {
-    display: flex;
-    flex-direction: column;
-    margin: 0 15% 10px;
-}
-
-.mapa-link {
-    color: #f1f1f1;
-    text-decoration: none;
-}
-
-.mapa-link:hover {
-    color: #f1f1f1;
-}
-
-.copyright {
-    color: #f1f1f1;
-    margin: 0 15%;
-}
-
-/* Pagina de recuperação */
-.bg-img-rec {
-    background-image: url(https://streamingsbrasil.com/wp-content/uploads/2019/12/Netflix-est%C3%A1-removendo-filmes-mais-r%C3%A1pido.jpg);
-}
-
-.container-pagina-rec {
-    display: flex;
-    justify-content: center;
-}
-
-.pagina-rec {
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 400px;
-    padding: 5% 3%;
-    margin-top: 7%;
-    margin-bottom: 7%;
-}
-
-.pagina-rec h3 {
-    color: #f1f1f1;
-}
-
-.pagina-rec p {
-    margin: 20px 0;
-}
-
-.email-rec {
-    border: none;
-    outline: none;
-    width: 100%;
-    padding: 10px 11px;
-    margin: 10px 0 30px;
-}
-
-.botao-rec {
-    border: 1px solid #E02844;
-    outline: none;
-    width: 100%;
-    padding: 10px 11px;
-    background-color: #E02844;
-    color: white;
-    margin-top: 10px;
-}
-
-.botao-rec:hover {
-    background-color: black;
-    transition: 0.4s;
-    border: 1px solid #E02844;
-}
-.email-enviado {
-    color: red;
-}
+    .email {
+        margin: 0 5% 0 3%;
+        outline: none;
+        border: none;
+        border-bottom: black 1px solid;
+    }
+    
+    .senha {
+        margin: 0 5% 0 3%;
+        outline: none;
+        border: none;
+        border-bottom: black 1px solid;
+    }
+    
+    .recuperacao {
+        margin-left: 3%;
+    }
+    
+    .btn-color {
+        background-color: #E02844;
+        border: #E02844;
+    }
+    
+    .btn-color:hover {
+        background-color: black;
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--links-color);
+    }
+    
+    
+    /* main */
+    .imagem-carrossel-um {
+        object-fit: cover;
+        object-position: 0 35%;
+        height: 500px;
+    }
+    
+    .imagem-carrossel-dois {
+        object-fit: cover;
+        object-position: 0 25%;
+        height: 500px;
+    }
+    
+    .imagem-carrossel-tres {
+        object-fit: cover;
+        object-position: 0 25%;
+        height: 500px;
+    }
+    
+    /* footer */
+    
+    .redes-sociais {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+    }
+    
+    .img-redes {
+        width: 30px;
+        margin: 0 5px;
+    }
+    
+    .mapa-site {
+        display: flex;
+        flex-direction: column;
+        margin: 0 15% 10px;
+    }
+    
+    .mapa-link {
+        color: #f1f1f1;
+        text-decoration: none;
+    }
+    
+    .mapa-link:hover {
+        color: #f1f1f1;
+    }
+    
+    .copyright {
+        color: #f1f1f1;
+        margin: 0 15%;
+    }
+    
+    /* Pagina de recuperação */
+    .bg-img-rec {
+        background-image: url(https://streamingsbrasil.com/wp-content/uploads/2019/12/Netflix-est%C3%A1-removendo-filmes-mais-r%C3%A1pido.jpg);
+    }
+    
+    .container-pagina-rec {
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    .pagina-rec {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 400px;
+        padding: 5% 3%;
+        margin-top: 7%;
+        margin-bottom: 7%;
+    }
+    
+    .pagina-rec h3 {
+        color: #f1f1f1;
+    }
+    
+    .pagina-rec p {
+        margin: 20px 0;
+    }
+    
+    .email-rec {
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 10px 11px;
+        margin: 10px 0 30px;
+    }
+    
+    .botao-rec {
+        border: 1px solid #E02844;
+        outline: none;
+        width: 100%;
+        padding: 10px 11px;
+        background-color: #E02844;
+        color: white;
+        margin-top: 10px;
+    }
+    
+    .botao-rec:hover {
+        background-color: black;
+        transition: 0.4s;
+        border: 1px solid #E02844;
+    }
+    
+    .email-enviado {
+        color: red;
+    }
+    .imagem-carrossel-um {
+        object-fit: cover;
+        object-position: 0 35%;
+        height: 500px;
+    }
+    
+    .imagem-carrossel-dois {
+        object-fit: cover;
+        object-position: 0 25%;
+        height: 500px;
+    }
+    
+    .imagem-carrossel-tres {
+        object-fit: cover;
+        object-position: 0 25%;
+        height: 500px;
+    }
+    
+    /* footer */
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #050505;
+    }
+    
+    .redes-sociais {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+    }
+    
+    .img-redes {
+        width: 30px;
+        margin: 0 5px;
+    }
+    
+    .mapa-site {
+        display: flex;
+        flex-direction: column;
+        margin: 0 15% 10px;
+    }
+    
+    .mapa-link {
+        color: #f1f1f1;
+        text-decoration: none;
+    }
+    
+    .mapa-link:hover {
+        color: #f1f1f1;
+    }
+    
+    .copyright {
+        color: #f1f1f1;
+        margin: 0 15%;
+    }
+    
+    /* Pagina de recuperação */
+    .bg-img-rec {
+        background-image: url(https://streamingsbrasil.com/wp-content/uploads/2019/12/Netflix-est%C3%A1-removendo-filmes-mais-r%C3%A1pido.jpg);
+    }
+    
+    .container-pagina-rec {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .pagina-rec {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 400px;
+        padding: 5% 3%;
+        margin-top: 7%;
+        margin-bottom: 7%;
+    }
+    
+    .pagina-rec h3 {
+        color: #f1f1f1;
+    }
+    
+    .pagina-rec p {
+        margin: 20px 0;
+    }
+    
+    .email-rec {
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 10px 11px;
+        margin: 10px 0 30px;
+    }
+    
+    .botao-rec {
+        border: 1px solid #E02844;
+        outline: none;
+        width: 100%;
+        padding: 10px 11px;
+        background-color: #E02844;
+        color: white;
+        margin-top: 10px;
+    }
+    
+    .botao-rec:hover {
+        background-color: black;
+        transition: 0.4s;
+        border: 1px solid #E02844;
+    }
+    
+    .email-enviado {
+        color: red;
+    }
 }
