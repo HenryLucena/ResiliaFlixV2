@@ -27,7 +27,7 @@ async function filmes () {
     // requisicao
     let pesquisa = document.getElementById('tituloFilme').value
     let key = 'df65174b'
-    let url = `http://www.omdbapi.com/?s=${pesquisa}&apikey=${key}`
+    let url = `https://www.omdbapi.com/?s=${pesquisa}&apikey=${key}`
     
     
     let resposta = await fetch(url)
