@@ -163,16 +163,21 @@ img .card-img-top{
     color: #CCC;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 .menu-mobile {
     display: none;
 }
 
-.fa-search  {
-    
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
 }
+
+.img-redes {
+    width: 30px;
+    margin: 5px 5px;
+}   
 
 @media (max-width: 768px) {
     .header {
@@ -240,18 +245,11 @@ img .card-img-top{
     .dark-teal-text {
         color: #004d40;
     }
-=======
-/* <<<<<<< Amanda */
-=======
-/* <<<<<<< Amanda */
-=======
-/* login */
->>>>>>> 93580d46e425d7d7b8c893f1ff72d645759dcb97
+
 .email-login {
     margin-left: 3%;
 }
 
->>>>>>> f55b3ff7d44c45f4bad5738338663718f2fff4b3
 .email {
     margin: 0 5% 0 3%;
     outline: none;
@@ -296,9 +294,7 @@ img .card-img-top{
 
     width: 300px;
 /* >>>>>>> main */
-<<<<<<< HEAD
->>>>>>> 6bc989ea62794d4e345602a72296dfecd8e31d2b
-=======
+
 }
 
 .imagem-carrossel-um {
@@ -407,8 +403,7 @@ footer {
     transition: 0.4s;
     border: 1px solid #E02844;
 }
-
 .email-enviado {
     color: red;
->>>>>>> f55b3ff7d44c45f4bad5738338663718f2fff4b3
+}
 }
