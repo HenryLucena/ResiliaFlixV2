@@ -281,16 +281,202 @@ footer {
 }
 
 
+/* main */
+.imagem-carrossel-um {
+    object-fit: cover;
+    object-position: 0 35%;
+    height: 500px;
+}
 
-/* Página contato */
+.imagem-carrossel-dois {
+    object-fit: cover;
+    object-position: 0 25%;
+    height: 500px;
+}
 
-div .card{
+.imagem-carrossel-tres {
+    object-fit: cover;
+    object-position: 0 25%;
+    height: 500px;
+}
 
-    width: 320px;
-    background-color: rgba(100, 100, 100, 0.3);
+/* footer */
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
 
 }
-img .card-img-top{
+
+.img-redes {
+    width: 30px;
+    margin: 0 5px;
+}
+
+.mapa-site {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15% 10px;
+}
+
+.mapa-link {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.mapa-link:hover {
+    color: #f1f1f1;
+}
+
+.copyright {
+    color: #f1f1f1;
+    margin: 0 15%;
+}
+
+/* Pagina de recuperação */
+
+.bg-img-rec {
+    background-image: url(https://streamingsbrasil.com/wp-content/uploads/2019/12/Netflix-est%C3%A1-removendo-filmes-mais-r%C3%A1pido.jpg);
+}
+
+.container-pagina-rec {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.pagina-rec {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 400px;
+    padding: 5% 3%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+.pagina-rec h3 {
+    color: #f1f1f1;
+}
+
+.pagina-rec p {
+    margin: 20px 0;
+}
+
+.email-rec {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 11px;
+    margin: 10px 0 30px;
+}
+
+.botao-rec {
+    border: 1px solid #E02844;
+    outline: none;
+    width: 100%;
+    padding: 10px 11px;
+    background-color: #E02844;
+    color: white;
+    margin-top: 10px;
+}
+
+.botao-rec:hover {
+    background-color: black;
+    transition: 0.4s;
+    border: 1px solid #E02844;
+}
+
+.email-enviado {
+    color: red;
+}
+
+/* página de contato */
+
+#aFale{
+    text-decoration: none!important;
+}
+
+#nossaEquipe{
+    width: 80%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+}
+
+.Devs{
+        width: 100%;
+        height: ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+}
+.desenvolvedor{
+    width: 200px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.24);
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.fotoDev{
+    width: 150px;
+    margin: 30px 15px 5px 15px;
+}
+
+.informacoes{
+    padding: 10px;
+    margin: 10px 0 0 0 ;
+    align-items: center;
+    text-align: center;
+}
+
+.iconesDevs{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fale-conosco{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#quadradoFaleConosco{
+    width: 70%;
+}
+
+.aboutUs{
+    color: #f1f1f1; 
+}
+
+/* #inputForm{
+    font-size: 14px;
+    color: #f1f1f1;
+} */
+.btn{
+    background-color: #E02844;
+    border: #E02844;
+}
+.btn:hover{
+    background-color: #f1f1f1;
+    border: #f1f1f1;
+}
+.btn:active{
+    background-color: #E02844;
+    border: #E02844;
 
     width: 300px;
 /* >>>>>>> main */
