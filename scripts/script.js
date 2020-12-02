@@ -25,7 +25,7 @@ document.getElementById('filme8').addEventListener('click', infoFilme('Fantastic
 // requisicao para modal
 async function infoFilme (nomeFilme, numFilme) {
     let key = 'df65174b'
-    let url = `http://www.omdbapi.com/?t=${nomeFilme}&apikey=${key}`
+    let url = `https://www.omdbapi.com/?t=${nomeFilme}&apikey=${key}`
 
     let resposta = await fetch(url)
         .then(res => {
