@@ -179,6 +179,96 @@ footer {
     margin: 5px 5px;
 }   
 
+/* página de contato */
+
+#aFale{
+    text-decoration: none!important;
+}
+
+#nossaEquipe{
+    width: 80%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+}
+
+.Devs{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+}
+.desenvolvedor{
+    width: 200px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.24);
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.fotoDev{
+    width: 150px;
+    margin: 30px 15px 5px 15px;
+}
+
+.informacoes{
+    padding: 10px;
+    margin: 10px 0 0 0 ;
+    align-items: center;
+    text-align: center;
+}
+
+.iconesDevs{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fale-conosco{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#quadradoFaleConosco{
+    width: 70%;
+}
+
+.aboutUs{
+    color: #f1f1f1; 
+}
+
+/* #inputForm{
+    font-size: 14px;
+    color: #f1f1f1;
+} */
+.btn{
+    background-color: #E02844;
+    border: #E02844;
+}
+.btn:hover{
+    background-color: #f1f1f1;
+    border: #f1f1f1;
+}
+.btn:active{
+    background-color: #E02844;
+    border: #E02844;
+
+    width: 300px;
+}
+
 @media (max-width: 768px) {
     .header {
         display: none;
@@ -390,98 +480,8 @@ footer {
     color: red;
 }
 
-/* página de contato */
 
-#aFale{
-    text-decoration: none!important;
-}
-
-#nossaEquipe{
-    width: 80%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 40px;
-}
-
-.Devs{
-        width: 100%;
-        height: ;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-}
-.desenvolvedor{
-    width: 200px;
-    height: 420px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.24);
-    color: white;
-    border-radius: 5px;
-    margin: 10px;
-}
-
-.fotoDev{
-    width: 150px;
-    margin: 30px 15px 5px 15px;
-}
-
-.informacoes{
-    padding: 10px;
-    margin: 10px 0 0 0 ;
-    align-items: center;
-    text-align: center;
-}
-
-.iconesDevs{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.fale-conosco{
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-size: 14px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-#quadradoFaleConosco{
-    width: 70%;
-}
-
-.aboutUs{
-    color: #f1f1f1; 
-}
-
-/* #inputForm{
-    font-size: 14px;
-    color: #f1f1f1;
-} */
-.btn{
-    background-color: #E02844;
-    border: #E02844;
-}
-.btn:hover{
-    background-color: #f1f1f1;
-    border: #f1f1f1;
-}
-.btn:active{
-    background-color: #E02844;
-    border: #E02844;
-
-    width: 300px;
 /* >>>>>>> main */
-
-}
 
 .imagem-carrossel-um {
     object-fit: cover;
