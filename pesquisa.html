@@ -19,56 +19,53 @@
         </a>
         <ul class="nav justify-content-end">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Filmes</a>
+              <a class="nav-link active" href="./index.html">Filmes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#login">Login</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./contato.html">Contato</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./pesquisa.html"><i class="fas fa-search"></i></a>
+                <a href="./pesquisa.html" class="nav-link">
+                    <i class="fas fa-search"></i>
+                </a>
             </li>
           </ul>
     </header>
     
     <nav class="navbar navbar-light light-blue lighten-4 menu-mobile">
-        
         <!-- Navbar brand -->
         <a href="./index.html" class="navbar-brand" style="text-decoration: none;">
             <h1 class="logo">ResiliaFlix</h1>
         </a>
-                        <button class="search">
-                            <i class="fas fa-search fa-1x"></i>
-                        </button>
+        
         <!-- <div class="nav-mobile"> -->
             <!-- Collapse button -->
             <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
             aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="menu-color"><i
                 class="fas fa-bars fa-1x"></i></span></button>
                 
-            <!-- Collapsible content -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-        
-                <!-- Links -->
-            <ul class="navbar-nav mr-auto items" style="text-align: right;">
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <!-- Links -->
+            <ul class="navbar-nav" style="text-align: right; background-color: var(--background-color); padding-right: 10px; border-radius: 10px;">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Filmes</a>
+                    <a class="nav-link" href="./index.html">Filmes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" data-toggle="modal" data-target="#login">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
+                    <a class="nav-link" href="./contato.html">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pesquisa.html">Pesquisar</a>
                 </li>
             </ul>
-            <!-- Links -->
-            
         </div>
-        <!-- Collapsible content -->
-        <!-- </div> -->
-      </nav>
+    </nav>
       <div class="busca" id="busca">
         <div>
             <input type="text" id="tituloFilme" class="input-busca">
@@ -81,19 +78,44 @@
 
       </div>
 
-      <footer>
-        <div class="redes-sociais">
-          <a href="#"><img class="img-redes" src=".\resources\icons\instagram.png"></a>
-          <a href="#"><img class="img-redes" src=".\resources\icons\facebook.png"></a>
-          <a href="#"><img class="img-redes" src=".\resources\icons\twitter.png"></a>
-          <a href="#"><img class="img-redes" src=".\resources\icons\youtube.png"></a>
-        </div>
-        
-        <p class="copyright">&copy; 2020 ResiliaFlix</p>
-      </footer>
+      <!-- modal login -->
+    <div class="modal fade" id="login" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <!-- header -->
+              <div class="modal-header">
+                  <h5 class="modal-title black-text" id="staticBackdropLabel">Login</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true" class="close-icon">&times;</span>
+                  </button>
+              </div>
+              <!-- body -->
+              <div class="modal-body">
+                  <label for="email" class="email-login black-text">Email</label>
+                  <input type="email" class="email black-text" name="email">
+                  <br>
+                  <label for="senha" class="black-text">Senha</label>
+                  <input type="password" name="senha" class="senha black-text">
+                  <br>
+                  <small class="recuperacao"><a href="./recuperacao-senha.html">Esqueceu sua senha?</a></small>
+                  <br>
+                  <small class="recuperacao"><a href="./cadastro.html">Cadastre-se</a></small>
+                  
+              </div>
+              <!-- footer -->
+              <div class="modal-footer">
+                  <input type="checkbox" class="check-box" id="exampleCheck1">
+                  <label class="lembre-se black-text black-text">Lembre-se de mim</label>
+              
+                  <button type="button" class="btn btn-secondary btn-color" data-dismiss="modal">Entrar</button>
+              </div>
+          </div>
+      </div>
+  </div>
       
     <!-- scripts bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./scripts/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
