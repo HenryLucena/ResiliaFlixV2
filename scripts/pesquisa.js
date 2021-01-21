@@ -29,71 +29,68 @@ async function filmes () {
     let key = 'df65174b'
     let url = `https://www.omdbapi.com/?s=${pesquisa}&apikey=${key}`
     
-    
     let resposta = await fetch(url)
         .then(res => {
             let req = res.json()
             return req
         })
         
-        if (resposta.Response === 'False') {
+    if (resposta.Response === 'False') {
+        
+        let results = document.getElementById('results')
+        let resultados = `<p class="erro-busca">Nenhum título com "${pesquisa}" foi encontrado.
+                    <br>Por favor, tente novamente.
+                    <br><small><em>Dica:</em> Pesquise o título em inglês</small></p>`
+        results.innerHTML = resultados
+    }
+
+    else if (resposta.Response === 'True') {
+        let container = document.getElementById('container')
+        
+        
+        let movies = resposta.Search // array retornado pela requisicao
+        
+        for (movie of movies) {
             
             let results = document.getElementById('results')
-            let resultados = `<p class="erro-busca">Nenhum título com "${pesquisa}" foi encontrado.
-                        <br>Por favor, tente novamente.
-                        <br><small><em>Dica:</em> Pesquise o título em inglês</small></p>`
+            let resultados = `<p class="resultados">Foram encontrados ${resposta.totalResults} resultados para esta pesquisa.<br>Estes são os principais...</p>`
             results.innerHTML = resultados
-        }
-
-        else if (resposta.Response === 'True') {
-            let container = document.getElementById('container')
             
+            // cria div especifica para cada filme
+            let movieContainer = document.createElement('div')
+            movieContainer.className = 'filme-container'
+            container.appendChild(movieContainer)
             
-            let movies = resposta.Search // array retornado pela requisicao
-            
-            for (movie of movies) {
-                
-                let results = document.getElementById('results')
-                let resultados = `<p class="resultados">Foram encontrados ${resposta.totalResults} resultados para esta pesquisa.<br>Estes são os principais...</p>`
-                results.innerHTML = resultados
-                
-                // cria div especifica para cada filme
-                let movieContainer = document.createElement('div')
-                movieContainer.className = 'filme-container'
-                container.appendChild(movieContainer)
-                
-                let img = `<div class="capa">
-                <img src="${movie.Poster}" alt="Capa do filme ${movie.Poster}" title="${movie.Poster}">
-                </div>`
-                movieContainer.innerHTML += img
+            let img = `<div class="capa">
+            <img src="${movie.Poster}" alt="Capa do filme ${movie.Poster}" title="${movie.Poster}">
+            </div>`
+            movieContainer.innerHTML += img
 
-                // div para infos
-                let infoDiv = document.createElement('div')
-                infoDiv.className = 'info-filme'
-                movieContainer.appendChild(infoDiv)
+            // div para infos
+            let infoDiv = document.createElement('div')
+            infoDiv.className = 'info-filme'
+            movieContainer.appendChild(infoDiv)
 
-                let titulo = `<h1 class="titulo-filme">${movie.Title}</h1>`
-                infoDiv.innerHTML += titulo
+            let titulo = `<h1 class="titulo-filme">${movie.Title}</h1>`
+            infoDiv.innerHTML += titulo
 
-                let tipoFilme = movie.Type
-                if (tipoFilme == "game") {
-                    tipoFilme = 'Jogo'
-                } else if (tipoFilme == 'movie') {
-                    tipoFilme = 'Filme'
-                } else if (tipoFilme == 'series') {
-                    tipoFilme = 'Série'
-                } else {
-                    tipoFilme = tipoFilme
-                }
-
-                let tipo = `<h2 class="tipo-filme">${tipoFilme}</h2>`
-                infoDiv.innerHTML += tipo 
-
-                let ano = `<span class="ano-filme">${movie.Year}</span>`
-                infoDiv.innerHTML += ano
-                
+            let tipoFilme = movie.Type
+            if (tipoFilme == "game") {
+                tipoFilme = 'Jogo'
+            } else if (tipoFilme == 'movie') {
+                tipoFilme = 'Filme'
+            } else if (tipoFilme == 'series') {
+                tipoFilme = 'Série'
+            } else {
+                tipoFilme = tipoFilme
             }
-        }
 
-        console.log(resposta)
+            let tipo = `<h2 class="tipo-filme">${tipoFilme}</h2>`
+            infoDiv.innerHTML += tipo 
+
+            let ano = `<span class="ano-filme">${movie.Year}</span>`
+            infoDiv.innerHTML += ano
+            
+        }
+    }
 }
