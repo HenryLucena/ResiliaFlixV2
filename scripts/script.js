@@ -1,10 +1,4 @@
-// let botaoRec = document.querySelector(".botao-rec")
-// let aviso = document.querySelector(".email-enviado")
-
-// botaoRec.addEventListener("click", ()=>{
-//     aviso.innerHTML = "Email enviado com sucesso!"
-// })
-
+// adicionando eventos
 document.getElementById('filme1').addEventListener('click', infoFilme('Avengers: Endgame', 1))
 document.getElementById('filme2').addEventListener('click', infoFilme('The Boys', 2))
 document.getElementById('filme3').addEventListener('click', infoFilme('Fleabag', 3))
@@ -20,7 +14,7 @@ document.getElementById('filme12').addEventListener('click', infoFilme('Hacksaw 
 
 // requisicao para modal
 async function infoFilme (nomeFilme, numFilme) {
-    let key = 'df65174b'
+    const key = 'df65174b'
     let url = `https://www.omdbapi.com/?t=${nomeFilme}&apikey=${key}`
 
     let resposta = await fetch(url)
